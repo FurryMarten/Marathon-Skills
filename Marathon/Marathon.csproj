@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BABC0A9C-F984-46CA-BD04-0C2AB1622D33}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Marathon</RootNamespace>
+    <AssemblyName>Marathon</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Marathon.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Y:\Program Files (x86)\MySQL\MySQL Connector Net 6.8.8\Assemblies\v4.5\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\AddUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AddUser.Designer.cs">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMenu.Designer.cs">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\EditUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\EditUser.Designer.cs">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\EditRunner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordinator\EditRunner.Designer.cs">
+      <DependentUpon>EditRunner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Coordinator\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Coordinator\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\AboutEvent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\AboutEvent.Designer.cs">
+      <DependentUpon>AboutEvent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\BMICalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\BMICalc.Designer.cs">
+      <DependentUpon>BMICalc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\BMRCalc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\BMRCalc.Designer.cs">
+      <DependentUpon>BMRCalc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Charity.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\Charity.Designer.cs">
+      <DependentUpon>Charity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\Checkpoints.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\Checkpoints.Designer.cs">
+      <DependentUpon>Checkpoints.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\EventMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\EventMenu.Designer.cs">
+      <DependentUpon>EventMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\HowLong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\HowLong.Designer.cs">
+      <DependentUpon>HowLong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Event\InteractiveMap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Event\InteractiveMap.Designer.cs">
+      <DependentUpon>InteractiveMap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Runner\RunnerAuthMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Runner\RunnerAuthMenu.Designer.cs">
+      <DependentUpon>RunnerAuthMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Runner\RunnerEditProfile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Runner\RunnerEditProfile.Designer.cs">
+      <DependentUpon>RunnerEditProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Runner\RunnerEventRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Runner\RunnerEventRegister.Designer.cs">
+      <DependentUpon>RunnerEventRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Runner\RunnerMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Runner\RunnerMenu.Designer.cs">
+      <DependentUpon>RunnerMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Runner\RunnerRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Runner\RunnerRegister.Designer.cs">
+      <DependentUpon>RunnerRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Runner\RunnerSponsors.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Runner\RunnerSponsors.Designer.cs">
+      <DependentUpon>RunnerSponsors.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartScreen.Designer.cs">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Admin\AddUser.resx">
+      <DependentUpon>AddUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\AdminMenu.resx">
+      <DependentUpon>AdminMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\EditUser.resx">
+      <DependentUpon>EditUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coordinator\EditRunner.resx">
+      <DependentUpon>EditRunner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Coordinator\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\AboutEvent.resx">
+      <DependentUpon>AboutEvent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\BMICalc.resx">
+      <DependentUpon>BMICalc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\BMRCalc.resx">
+      <DependentUpon>BMRCalc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Charity.resx">
+      <DependentUpon>Charity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\Checkpoints.resx">
+      <DependentUpon>Checkpoints.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\EventMenu.resx">
+      <DependentUpon>EventMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\HowLong.resx">
+      <DependentUpon>HowLong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Event\InteractiveMap.resx">
+      <DependentUpon>InteractiveMap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Runner\RunnerAuthMenu.resx">
+      <DependentUpon>RunnerAuthMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Runner\RunnerEditProfile.resx">
+      <DependentUpon>RunnerEditProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Runner\RunnerEventRegister.resx">
+      <DependentUpon>RunnerEventRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Runner\RunnerMenu.resx">
+      <DependentUpon>RunnerMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Runner\RunnerRegister.resx">
+      <DependentUpon>RunnerRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Runner\RunnerSponsors.resx">
+      <DependentUpon>RunnerSponsors.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartScreen.resx">
+      <DependentUpon>StartScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
